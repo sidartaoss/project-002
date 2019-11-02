@@ -1,6 +1,6 @@
 # Project 002 - Consuming HTTP Microservices
 
-One  microservice  does  not  form  an  application;  you  need  a  system of  microservices.  Now  that we  have  our  first  microservice  running,let’s  write  a  second  microservice  to  consume  it. This  second  micro‐service  also  provides  an  HTTP  facade  to  invoke  it,  and  on  each invocation  calls  the  microservice  we  just  implemented.
+One microservice does not form an application; you need a system of microservices.  Now that we have our first microservice running, let’s write a second microservice to consume it. This second microservice also provides an HTTP facade to invoke it, and on each invocation calls the microservice we just implemented.
 
 This project is based on the references below.
 
@@ -8,24 +8,7 @@ This project is based on the references below.
 
     RedHat Developer, accessed 1 November 2019, <https://developers.redhat.com/promotions/building-reactive-microservices-in-java>
 
-    Kubernetes Hands-On - Deploy Microservices to the AWS Cloud 2018, Udemy, accessed 1 November 2019, <https://www.udemy.com/course/kubernetes-microservices>  
-
-
-## Building Reactive Microservices
-
- 
-
-In this chapter, we will build our first microservices with Vert.x. As most microservice systems use HTTP interactions, we are going to start with HTTP microservices. But because systems consist of multiple communicating microservices, we will build another microsevice that consumes the first one.
-
- 
-
-Then, we will demonstrate why such a design does not completely embrace reactive microservices. Finally, we will implement message-based microservices to see how messaging improves the reactiveness.
-
- 
-
-### Implementing HTTP Microservices
-
-Microservices often expose their API via HTTP and are consumed using HTTP requests. Let’s see how these HTTP interactions can be implemented with Vert.x.
+    Kubernetes Hands-On - Deploy Microservices to the AWS Cloud 2018, Udemy, accessed 1 November 2019, <https://www.udemy.com/course/kubernetes-microservices>
 
 
 ### Project Creation
@@ -38,6 +21,8 @@ Microservices often expose their API via HTTP and are consumed using HTTP reques
       -DprojectArtifactId=project-002 \
       -Dverticle=io.vertx.sidartasilva.http.HelloConsumerMicroservice \
       -Ddependencies=web,web-client,rx
+
+The last command adds another dependency: the Vert.x web client,an asynchronous HTTP client. We will use this client to call the firstmicroservice. The command has also added the Vert.x RxJava binding we are going to use later.
 
 
 ### HTTP Microservice Using Routes and Parameters
