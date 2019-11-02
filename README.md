@@ -30,14 +30,14 @@ Microservices often expose their API via HTTP and are consumed using HTTP reques
 
 ### Project Creation
 
-    mkdir project001
-    cd project001
+    mkdir project002
+    cd project002
 
     mvn io.fabric8:vertx-maven-plugin:1.0.5:setup \
-      -DprojectGroupId=com.sidartasilva.projeto001 \
-      -DprojectArtifactId=project001 \
-      -Dverticle=com.sidartasilva.projeto001.App
-      -Ddependencies=web
+      -DprojectGroupId=io.vertx.sidartasilva.microservice \
+      -DprojectArtifactId=project-002 \
+      -Dverticle=io.vertx.sidartasilva.http.HelloConsumerMicroservice \
+      -Ddependencies=web,web-client,rx
 
 
 ### HTTP Microservice Using Routes and Parameters
