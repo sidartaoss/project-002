@@ -27,7 +27,7 @@ public class HelloConsumerMicroservice extends AbstractVerticle {
 
         HttpRequest<JsonObject> request = client
             .get(
-                8080
+                80
                 , System.getenv("HOST")
                 , "/vert.x")
             .as(BodyCodec.jsonObject());
