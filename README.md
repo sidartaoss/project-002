@@ -171,7 +171,7 @@ And now let's check the created ConfigMap, Pods and Services.
     kubectl get services
 
 
-![](images/Captura-de-tela-de-2019-11-02-18-40-02.png "Check the generated configmap, pods and services")
+![](images/Captura-de-tela-de-2019-11-03-15-54-28.png "Check the generated configmap, pods and services")
 
 
 We are now able to see in EXTERNAL-IP the DNS name of our 2 Load Balancers: a83f66567fce411e9bd7912dd9018b52-56000386.us-east-1.elb.amazonaws.com and ab3dfbe4ffe6711e9bd7912dd9018b52-2125132706.us-east-1.elb.amazonaws.com.
@@ -181,7 +181,7 @@ We are now able to see in EXTERNAL-IP the DNS name of our 2 Load Balancers: a83f
 
 These are the AWS Load Balancers created into our cluster.
 
-![](images/Captura-de-tela-de-2019-11-02-18-48-25.png "AWS Load Balancers")
+![](images/Captura-de-tela-de-2019-11-03-16-00-49.png "AWS Load Balancers")
 
 
 So we're able to check that our first HTTP Microservice, i.e., the hello Microservice is running by entering the DNS name of our firstly created Load Balancer, which is a83f66567fce411e9bd7912dd9018b52-56000386.us-east-1.elb.amazonaws.com.
